@@ -1,0 +1,37 @@
+.logo-container {
+    overflow: hidden; /* Prevents overflow of images */
+    width: 50%; /* Adjust based on your layout */
+    
+
+    
+    
+
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    width: calc(200px * 9); /* Total width based on number of images */
+    animation: scroll 20s linear infinite; /* Adjust timing as needed */
+    
+    
+}
+
+.logo div {
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.logo img {
+    width: 200px; /* Fixed width for images */
+    height: 200px; /* Fixed height for images */
+    margin-right: 10px; /* Adds space between images */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 9)); /* Adjust this based on the number of images */
+    }
+}
